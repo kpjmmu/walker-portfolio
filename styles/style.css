@@ -1,0 +1,188 @@
+:root {
+    /* font styles */
+    --ff-primary: 'Roboto', sans-serif;
+
+    --fw-base: 400;
+    --fw-bold: 700;
+
+    --fs-12: .75rem;
+    --fs-16: 1rem;
+    --fs-18: 1.125rem;
+    --fs-24: 1.5rem;
+    --fs-26: 1.625rem;
+    --fs-32: 2rem;
+    --fs-64: 4rem;
+
+    --clr-bg-primary: #000;
+    --clr-bg-secondary: #1E1E1E;
+    --clr-bg-btn: #7F95D1;
+
+    --clr-text-primary: #F9F4F5;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--clr-bg-primary);
+    color: var(--clr-text-primary);
+    font-family: var(--ff-primary);
+}
+
+header {
+    background-image: url(../images/hero-bg-mobile.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 4.5rem;
+}
+
+nav {
+    background: rgba(0, 0, 0, .8)
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* ===============
+   Typography
+   ===============*/
+
+.logo {
+    font-size: var(--fs-26);
+    font-weight: var(--fw-bold);
+}
+
+.fa-bars {
+    font-size: var(--fs-26);
+}
+
+.title {
+    font-size: var(--fs-26);
+    font-weight: var(--fw-base);
+    margin-bottom: 3rem;
+}
+
+.title-accent {
+    display: block;
+    margin-left: 1.75rem;
+}
+
+.section-title {
+    border-left: 1px solid var(--clr-text-primary);
+    border-right: 1px solid var(--clr-text-primary);
+    display: inline;
+    font-size: var(--fs-32);
+    font-weight: var(--fw-base);
+    padding: 0 1rem;
+}
+
+.card-title {
+    font-size: var(--fs-26);
+    margin-bottom: .75rem;
+}
+
+.tech-icon {
+    font-size: var(--fs-24);
+}
+
+/* ===============
+   Layout
+   ===============*/
+
+.flex {
+    display: flex;
+}
+
+.nav-bar {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8.75rem;
+}
+
+.container {
+    padding: 1.5rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.projects,
+.about {
+    text-align: center;
+}
+
+.about {
+    margin: 4rem 0;
+}
+
+.project-card {
+    margin: 0 auto;
+    margin-top: 4rem;
+    padding: .875rem;
+    background: var(--clr-bg-secondary);
+    border-radius: 10px;
+    text-align: left;
+}
+
+.card-img-container {
+    height: 250px;
+    background: rgba(0, 0, 0);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.tech-container {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon-container {
+    gap: .75rem;
+}
+
+/* ===============
+   Header Section
+   ===============*/
+
+.background-opacity {
+    z-index: 1;
+    background: rgba(0, 0, 0, .5);
+
+}
+
+.down-arrow {
+    max-width: 24px;
+    margin: 0 auto;
+    margin-bottom: .5rem;
+}
+
+/* ===============
+   Main Section
+   ===============*/
+
+.card-img {
+    max-width: 275px;
+    min-height: 200px;
+    object-fit: contian;
+    object-position: center;
+    border-radius: 10px;
+}
+
+.btn {
+    background: var(--clr-bg-btn);
+    border: none;
+    border-radius: 500px;
+    color: var(--clr-text-primary);
+    font-size: var(--fs-12);
+    font-weight: var(--fw-base);
+    padding: .5rem 1.5rem;
+}
