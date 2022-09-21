@@ -41,6 +41,8 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     margin-bottom: 4.5rem;
+    position: relative;
+    min-height: 100vh;
 }
 
 nav {
@@ -78,22 +80,10 @@ img {
     animation-fill-mode: both;
 }
 
-@-webkit-keyframes fadeInLeft {
-    0% {
-        opacity: 0;
-        -webkit-transform: translateX(-20px);
-    }
-
-    100% {
-        opacity: 1;
-        -webkit-transform: translateX(0);
-    }
-}
-
 @keyframes fadeInLeft {
     0% {
         opacity: 0;
-        transform: translateX(-20px);
+        transform: translateX(-40px);
     }
 
     100% {
@@ -102,8 +92,23 @@ img {
     }
 }
 
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadeInDown {
+    animation-name: fadeInDown;
+}
+
 .fadeInLeft {
-    -webkit-animation-name: fadeInLeft;
     animation-name: fadeInLeft;
 }
 
@@ -142,23 +147,6 @@ img {
     margin-top: 0;
 }
 
-.about-text:last-child {
-    margin-bottom: 4rem;
-}
-
-.about-container {
-    padding: 1rem;
-    background: var(--clr-bg-secondary);
-    border-radius: 10px;
-    margin-top: 4rem;
-}
-
-.socials-container {
-    gap: 2rem;
-    justify-content: center;
-    align-items: center;
-}
-
 footer>a>.fa-brands {
     color: var(--clr-text-primary);
     font-size: 1.5rem;
@@ -184,11 +172,16 @@ footer>a>.fa-brands:focus {
 .nav-bar {
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 8.75rem;
 }
 
 .container {
     padding: 1.5rem;
+}
+
+.head-title-container {
+    position: absolute;
+    display: block;
+    bottom: 6rem;
 }
 
 .hidden {
@@ -205,6 +198,9 @@ footer>a>.fa-brands:focus {
 }
 
 .arrow-container {
+    position: absolute;
+    bottom: 1rem;
+    left: 50vw;
     text-align: center;
 }
 
@@ -238,6 +234,19 @@ footer>a>.fa-brands:focus {
     margin-bottom: 1.5rem;
 }
 
+.about-container {
+    padding: 2rem 1.5rem;
+    background: var(--clr-bg-secondary);
+    border-radius: 10px;
+    margin-top: 4rem;
+}
+
+.socials-container {
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
 .icon-container {
     gap: .75rem;
 }
@@ -254,7 +263,7 @@ footer>a>.fa-brands:focus {
 .background-opacity {
     z-index: 1;
     background: rgba(0, 0, 0, .5);
-
+    min-height: 100vh;
 }
 
 .down-arrow {
@@ -300,8 +309,13 @@ footer>a>.fa-brands:focus {
 
 @media (min-width: 750px) {
     header {
+        background-image: url(../images/hero-bg-desktop.jpg);
         min-height: 100vh;
     }
+
+    /* ===============
+       Layout
+       ===============*/
 
     /* ===============
        Typography
@@ -326,7 +340,4 @@ footer>a>.fa-brands:focus {
        Header Section
        ===============*/
 
-    .background-opacity {
-        min-height: 100vh;
-    }
 }
