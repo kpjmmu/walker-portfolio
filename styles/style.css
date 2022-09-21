@@ -71,6 +71,42 @@ img {
     margin-bottom: 3rem;
 }
 
+.animate {
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fadeInLeft {
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+}
+
 .title-accent {
     display: block;
     margin-left: 1.75rem;
@@ -102,8 +138,19 @@ img {
     font-weight: var(--fw-bold);
 }
 
+.about-text:first-child {
+    margin-top: 0;
+}
+
 .about-text:last-child {
     margin-bottom: 4rem;
+}
+
+.about-container {
+    padding: 1rem;
+    background: var(--clr-bg-secondary);
+    border-radius: 10px;
+    margin-top: 4rem;
 }
 
 .socials-container {
@@ -155,6 +202,14 @@ footer>a>.fa-brands:focus {
 
 .about {
     margin-top: 4rem;
+}
+
+.arrow-container {
+    text-align: center;
+}
+
+.invisible {
+    visibility: hidden;
 }
 
 .project-card {
@@ -241,4 +296,37 @@ footer>a>.fa-brands:focus {
 .logo:last-child {
     text-align: center;
     margin-bottom: 4rem;
+}
+
+@media (min-width: 750px) {
+    header {
+        min-height: 100vh;
+    }
+
+    /* ===============
+       Typography
+       ===============*/
+
+    .logo {
+        font-size: var(--fs-26);
+        font-weight: var(--fw-bold);
+    }
+
+    .fa-bars {
+        font-size: var(--fs-26);
+    }
+
+    .title {
+        font-size: var(--fs-64);
+        font-weight: var(--fw-base);
+        margin-bottom: 3rem;
+    }
+
+    /* ===============
+       Header Section
+       ===============*/
+
+    .background-opacity {
+        min-height: 100vh;
+    }
 }
