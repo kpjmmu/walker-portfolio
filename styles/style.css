@@ -11,6 +11,7 @@
     --fs-24: 1.5rem;
     --fs-26: 1.625rem;
     --fs-32: 2rem;
+    --fs-48: 3rem;
     --fs-64: 4rem;
 
     --clr-bg-primary: #000;
@@ -29,6 +30,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: var(--clr-bg-primary);
     color: var(--clr-text-primary);
@@ -43,6 +48,7 @@ header {
     margin-bottom: 4.5rem;
     position: relative;
     min-height: 100vh;
+    border-bottom: 1px solid rgba(205, 58, 21, 0.75);
 }
 
 nav {
@@ -63,20 +69,18 @@ img {
     font-weight: var(--fw-bold);
 }
 
-.fa-bars {
-    font-size: var(--fs-26);
-}
-
 .title {
-    font-size: var(--fs-26);
+    font-size: var(--fs-32);
     font-weight: var(--fw-base);
     margin-bottom: 3rem;
 }
 
+.open-menu {
+    font-size: var(--fs-26);
+}
+
 .animate {
-    -webkit-animation-duration: 3s;
     animation-duration: 3s;
-    -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
 }
 
@@ -104,12 +108,26 @@ img {
     }
 }
 
+@keyframes growDown {
+    0% {
+        transform: scaleY(0)
+    }
+
+    100% {
+        transform: scaleY(1)
+    }
+}
+
 .fadeInDown {
     animation-name: fadeInDown;
 }
 
 .fadeInLeft {
     animation-name: fadeInLeft;
+}
+
+.growDown {
+    animation-name: growDown;
 }
 
 .title-accent {
@@ -170,8 +188,10 @@ footer>a>.fa-brands:focus {
 }
 
 .nav-bar {
+    position: relative;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid rgba(205, 58, 21, 0.75);
 }
 
 .container {
@@ -184,16 +204,20 @@ footer>a>.fa-brands:focus {
     bottom: 6rem;
 }
 
-.hidden {
-    display: none;
+.project-grid {
+    max-width: 95%;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
 }
 
-.projects,
-.about {
+#projects,
+#about {
     text-align: center;
 }
 
-.about {
+#about {
     margin-top: 4rem;
 }
 
@@ -215,9 +239,12 @@ footer>a>.fa-brands:focus {
     background: var(--clr-bg-secondary);
     border-radius: 10px;
     text-align: left;
+    max-width: 300px;
+    box-shadow: 0px 14px 12px 0px rgba(205, 58, 21, 0.75);
 }
 
 .card-img-container {
+    width: 250px;
     height: 250px;
     background: rgba(0, 0, 0);
     border-radius: 10px;
@@ -238,7 +265,7 @@ footer>a>.fa-brands:focus {
     padding: 2rem 1.5rem;
     background: var(--clr-bg-secondary);
     border-radius: 10px;
-    margin-top: 4rem;
+    margin: 4rem 0 2.5rem;
 }
 
 .socials-container {
@@ -266,6 +293,46 @@ footer>a>.fa-brands:focus {
     min-height: 100vh;
 }
 
+.nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: absolute;
+    list-style: none;
+    z-index: 1;
+    background: var(--clr-bg-primary);
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 1.5rem;
+}
+
+.open-menu,
+.close-menu {
+    cursor: pointer;
+}
+
+.close-menu {
+    margin-left: auto;
+    font-size: var(--fs-26)
+}
+
+.nav-item {
+    text-align: center;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: inherit;
+    font-size: var(--fs-24);
+}
+
+.nav-item a:hover,
+.nav-item a:focus {
+    border-bottom: 3px solid rgba(205, 58, 21, 0.75);
+    padding-bottom: .25rem;
+}
+
 .down-arrow {
     max-width: 24px;
     margin: 0 auto;
@@ -277,16 +344,18 @@ footer>a>.fa-brands:focus {
    ===============*/
 
 .card-img {
-    max-width: 275px;
-    min-height: 200px;
-    object-fit: contian;
-    object-position: center;
+    max-width: 250px;
+    height: 250px;
+    object-fit: cover;
+    object-position: top;
     border-radius: 10px;
+    margin: 0 auto;
+    margin-bottom: 1rem;
 }
 
 .btn {
     min-width: 105px;
-    background: var(--clr-bg-btn);
+    background: rgba(205, 58, 21, 0.75);
     border: none;
     border-radius: 500px;
     color: var(--clr-text-primary);
@@ -316,6 +385,24 @@ footer>a>.fa-brands:focus {
     /* ===============
        Layout
        ===============*/
+    .project-grid {
+        max-width: 65%;
+        margin: 0 auto;
+    }
+
+    .nav-menu-container {
+        display: none;
+    }
+
+    .invisible {
+        visibility: initial;
+    }
+
+    .about-container {
+        max-width: 65%;
+        margin: 4rem auto 2.5rem;
+    }
+
 
     /* ===============
        Typography
@@ -326,18 +413,25 @@ footer>a>.fa-brands:focus {
         font-weight: var(--fw-bold);
     }
 
-    .fa-bars {
-        font-size: var(--fs-26);
-    }
-
     .title {
         font-size: var(--fs-64);
         font-weight: var(--fw-base);
         margin-bottom: 3rem;
     }
 
+    .open-menu {
+        visibility: hidden;
+    }
+
     /* ===============
        Header Section
        ===============*/
+
+    .nav-list {
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 1.5rem;
+        background: none;
+    }
 
 }

@@ -10,9 +10,9 @@ setTimeout(() => {
 }, "4000");
 
 navOpen.addEventListener("click", () => {
-    navList.classList.remove("hidden");
+    navList.classList.remove("invisible", "growDown");
 })
 
 navClose.addEventListener("click", () => {
-    navList.classList.add("hidden");
+    navList.classList.add("invisible");
 })
