@@ -70,7 +70,7 @@ img {
 }
 
 .title {
-    font-size: var(--fs-32);
+    font-size: var(--fs-26);
     font-weight: var(--fw-base);
     margin-bottom: 3rem;
 }
@@ -108,26 +108,12 @@ img {
     }
 }
 
-@keyframes growDown {
-    0% {
-        transform: scaleY(0)
-    }
-
-    100% {
-        transform: scaleY(1)
-    }
-}
-
 .fadeInDown {
     animation-name: fadeInDown;
 }
 
 .fadeInLeft {
     animation-name: fadeInLeft;
-}
-
-.growDown {
-    animation-name: growDown;
 }
 
 .title-accent {
@@ -174,7 +160,8 @@ footer>a>.fa-brands {
 footer>a>.fa-brands:hover,
 footer>a>.fa-brands:focus {
     cursor: pointer;
-    color: var(--clr-text-primary);
+    color: rgba(205, 58, 21, 0.75);
+    ;
     font-size: 1.75rem;
     transition: font-size .25s ease-in;
 }
@@ -201,7 +188,7 @@ footer>a>.fa-brands:focus {
 .head-title-container {
     position: absolute;
     display: block;
-    bottom: 6rem;
+    bottom: 8rem;
 }
 
 .project-grid {
@@ -223,12 +210,13 @@ footer>a>.fa-brands:focus {
 
 .arrow-container {
     position: absolute;
-    bottom: 1rem;
+    bottom: 3rem;
     left: 50vw;
     text-align: center;
 }
 
-.invisible {
+.invisible,
+.hidden {
     visibility: hidden;
 }
 
@@ -266,12 +254,14 @@ footer>a>.fa-brands:focus {
     background: var(--clr-bg-secondary);
     border-radius: 10px;
     margin: 4rem 0 2.5rem;
+    box-shadow: 0px 14px 12px 0px rgba(205, 58, 21, 0.75);
 }
 
 .socials-container {
     gap: 2rem;
     justify-content: center;
     align-items: center;
+    border-top: 1px solid rgba(205, 58, 21, 0.75);
 }
 
 .icon-container {
@@ -305,6 +295,7 @@ footer>a>.fa-brands:focus {
     top: 0;
     left: 0;
     padding: 1.5rem;
+    border-bottom: 1px solid rgba(205, 58, 21, 0.75);
 }
 
 .open-menu,
@@ -385,6 +376,10 @@ footer>a>.fa-brands:focus {
     /* ===============
        Layout
        ===============*/
+    .container {
+        padding: 2rem;
+    }
+
     .project-grid {
         max-width: 65%;
         margin: 0 auto;
@@ -394,7 +389,7 @@ footer>a>.fa-brands:focus {
         display: none;
     }
 
-    .invisible {
+    .hidden {
         visibility: initial;
     }
 
@@ -430,8 +425,24 @@ footer>a>.fa-brands:focus {
     .nav-list {
         flex-direction: row;
         justify-content: flex-end;
+        position: initial;
         gap: 1.5rem;
         background: none;
+        padding: 0;
+        border: none;
+    }
+
+    /* ===============
+       Footer Section
+       ===============*/
+
+    footer>a>.fa-brands {
+        font-size: 2rem;
+    }
+
+    footer>a>.fa-brands:hover,
+    footer>a>.fa-brands:focus {
+        font-size: 2.25rem;
     }
 
 }
