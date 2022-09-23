@@ -77,7 +77,10 @@ img {
 .logo:hover,
 .logo:focus {
     cursor: pointer;
-    color: var(--clr-accent);
+    background: -webkit-linear-gradient(var(--clr-text-primary), var(--clr-accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent
 }
 
 .title {
@@ -135,6 +138,10 @@ img {
 
 .about-icon {
     font-size: 1.5rem;
+    background: -webkit-linear-gradient(var(--clr-text-primary), var(--clr-accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent
 }
 
 .about-text {
@@ -159,9 +166,12 @@ footer>a>.fa-brands {
 footer>a>.fa-brands:hover,
 footer>a>.fa-brands:focus {
     cursor: pointer;
-    color: var(--clr-accent);
     font-size: 1.75rem;
     transition: font-size .25s ease-in;
+    background: -webkit-linear-gradient(var(--clr-text-primary), var(--clr-accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent
 }
 
 /* ===============
@@ -379,6 +389,25 @@ footer>a>.fa-brands:focus {
     }
 
     /* ===============
+       Typography
+       ===============*/
+
+    .logo {
+        font-size: var(--fs-26);
+        font-weight: var(--fw-bold);
+    }
+
+    .title {
+        font-size: var(--fs-64);
+        font-weight: var(--fw-base);
+        margin-bottom: 3rem;
+    }
+
+    .open-menu {
+        visibility: hidden;
+    }
+
+    /* ===============
        Layout
        ===============*/
     .container {
@@ -415,25 +444,6 @@ footer>a>.fa-brands:focus {
         width: 60%;
     }
 
-
-    /* ===============
-       Typography
-       ===============*/
-
-    .logo {
-        font-size: var(--fs-26);
-        font-weight: var(--fw-bold);
-    }
-
-    .title {
-        font-size: var(--fs-64);
-        font-weight: var(--fw-base);
-        margin-bottom: 3rem;
-    }
-
-    .open-menu {
-        visibility: hidden;
-    }
 
     /* ===============
        Header Section
