@@ -8,6 +8,7 @@
     --fs-12: .75rem;
     --fs-16: 1rem;
     --fs-18: 1.125rem;
+    --fs-20: 1.25rem;
     --fs-24: 1.5rem;
     --fs-26: 1.625rem;
     --fs-32: 2rem;
@@ -20,6 +21,8 @@
     --clr-bg-footer: rgba(255, 255, 255, .1);
 
     --clr-text-primary: #F9F4F5;
+
+    --doc-height: 100%;
 }
 
 *,
@@ -48,6 +51,7 @@ header {
     margin-bottom: 4.5rem;
     position: relative;
     min-height: 100vh;
+    min-height: var(--doc-height);
     border-bottom: 1px solid rgba(205, 58, 21, 0.75);
 }
 
@@ -131,11 +135,11 @@ img {
 }
 
 .card-title {
-    font-size: var(--fs-26);
+    font-size: var(--fs-18);
 }
 
 .tech-icon {
-    font-size: var(--fs-24);
+    font-size: var(--fs-20);
 }
 
 .about-text {
@@ -228,7 +232,7 @@ footer>a>.fa-brands:focus {
     border-radius: 10px;
     text-align: left;
     max-width: 300px;
-    box-shadow: 0px 14px 12px 0px rgba(205, 58, 21, 0.75);
+    box-shadow: 0px 7px 12px 0px rgba(205, 58, 21, 0.75);
 }
 
 .card-img-container {
