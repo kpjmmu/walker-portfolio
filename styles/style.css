@@ -144,17 +144,33 @@ img {
     -webkit-text-fill-color: transparent
 }
 
+.blurb {
+    font-size: var(--fs-26);
+    width: 90%;
+    margin: 2rem auto;
+}
+
 .about-text {
     font-size: var(--fs-26);
-    margin-top: 4rem;
+    margin-top: 2rem;
 }
 
 .about-text>span {
     font-weight: var(--fw-bold);
 }
 
-.about-text:first-child {
-    margin-top: 0;
+.resume-link {
+    color: inherit;
+    display: block;
+    max-width: 65%;
+    margin: 1.5rem auto 4rem;
+    transition: font-size .3s ease;
+}
+
+.resume-link:hover,
+.resume-link:focus {
+    font-size: 1.075rem;
+    transition: font-size .2s ease;
 }
 
 footer>a>.fa-brands {
@@ -265,6 +281,10 @@ footer>a>.fa-brands:focus {
     box-shadow: 0px 7px 12px 0px var(--clr-accent);
 }
 
+.resume-container {
+    text-align: center;
+}
+
 .socials-container {
     gap: 2rem;
     justify-content: center;
@@ -279,11 +299,6 @@ footer>a>.fa-brands:focus {
 .socials-container {
     padding: 2rem;
     background: var(--clr-bg-footer);
-}
-
-.blurb {
-    width: 90%;
-    margin: 2rem auto;
 }
 
 /* ===============
@@ -381,6 +396,13 @@ footer>a>.fa-brands:focus {
     margin-bottom: 4rem;
 }
 
+.accent-line {
+    content: " ";
+    max-width: 50px;
+    margin: 0 auto;
+    border-bottom: 3px solid var(--clr-accent);
+}
+
 @media (min-width: 750px) {
     header {
         background-image: url(../images/hero-bg-desktop.jpg);
@@ -405,6 +427,10 @@ footer>a>.fa-brands:focus {
 
     .open-menu {
         visibility: hidden;
+    }
+
+    .resume-link {
+        max-width: 20%;
     }
 
     /* ===============
