@@ -20,9 +20,9 @@
     --clr-bg-btn: #7F95D1;
     --clr-bg-footer: rgba(255, 255, 255, .1);
 
-    --clr-text-primary: #F9F4F5;
+    --clr-accent: rgba(205, 58, 21, 0.75);
 
-    --doc-height: 100%;
+    --clr-text-primary: #F9F4F5;
 }
 
 *,
@@ -51,8 +51,7 @@ header {
     margin-bottom: 4.5rem;
     position: relative;
     min-height: 100vh;
-    min-height: var(--doc-height);
-    border-bottom: 1px solid rgba(205, 58, 21, 0.75);
+    border-bottom: 1px solid var(--clr-accent);
 }
 
 nav {
@@ -69,8 +68,16 @@ img {
    ===============*/
 
 .logo {
+    color: inherit;
     font-size: var(--fs-26);
     font-weight: var(--fw-bold);
+    text-decoration: none;
+}
+
+.logo:hover,
+.logo:focus {
+    cursor: pointer;
+    color: var(--clr-accent);
 }
 
 .title {
@@ -88,18 +95,6 @@ img {
     animation-fill-mode: both;
 }
 
-@keyframes fadeInLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(-40px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
 @keyframes fadeInDown {
     0% {
         opacity: 0;
@@ -114,10 +109,6 @@ img {
 
 .fadeInDown {
     animation-name: fadeInDown;
-}
-
-.fadeInLeft {
-    animation-name: fadeInLeft;
 }
 
 .title-accent {
@@ -142,6 +133,10 @@ img {
     font-size: var(--fs-20);
 }
 
+.about-icon {
+    font-size: 1.5rem;
+}
+
 .about-text {
     font-size: var(--fs-26);
     margin-top: 4rem;
@@ -164,8 +159,7 @@ footer>a>.fa-brands {
 footer>a>.fa-brands:hover,
 footer>a>.fa-brands:focus {
     cursor: pointer;
-    color: rgba(205, 58, 21, 0.75);
-    ;
+    color: var(--clr-accent);
     font-size: 1.75rem;
     transition: font-size .25s ease-in;
 }
@@ -182,7 +176,7 @@ footer>a>.fa-brands:focus {
     position: relative;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid rgba(205, 58, 21, 0.75);
+    border-bottom: 1px solid var(--clr-accent);
 }
 
 .container {
@@ -232,7 +226,7 @@ footer>a>.fa-brands:focus {
     border-radius: 10px;
     text-align: left;
     max-width: 300px;
-    box-shadow: 0px 7px 12px 0px rgba(205, 58, 21, 0.75);
+    box-shadow: 0px 7px 12px 0px var(--clr-accent);
 }
 
 .card-img-container {
@@ -258,14 +252,14 @@ footer>a>.fa-brands:focus {
     background: var(--clr-bg-secondary);
     border-radius: 10px;
     margin: 4rem 0 2.5rem;
-    box-shadow: 0px 14px 12px 0px rgba(205, 58, 21, 0.75);
+    box-shadow: 0px 7px 12px 0px var(--clr-accent);
 }
 
 .socials-container {
     gap: 2rem;
     justify-content: center;
     align-items: center;
-    border-top: 1px solid rgba(205, 58, 21, 0.75);
+    border-top: 1px solid var(--clr-accent);
 }
 
 .icon-container {
@@ -275,6 +269,11 @@ footer>a>.fa-brands:focus {
 .socials-container {
     padding: 2rem;
     background: var(--clr-bg-footer);
+}
+
+.blurb {
+    width: 90%;
+    margin: 2rem auto;
 }
 
 /* ===============
@@ -299,7 +298,7 @@ footer>a>.fa-brands:focus {
     top: 0;
     left: 0;
     padding: 1.5rem;
-    border-bottom: 1px solid rgba(205, 58, 21, 0.75);
+    border-bottom: 1px solid var(--clr-accent);
 }
 
 .open-menu,
@@ -324,7 +323,7 @@ footer>a>.fa-brands:focus {
 
 .nav-item a:hover,
 .nav-item a:focus {
-    border-bottom: 3px solid rgba(205, 58, 21, 0.75);
+    border-bottom: 3px solid var(--clr-accent);
     padding-bottom: .25rem;
 }
 
@@ -350,7 +349,7 @@ footer>a>.fa-brands:focus {
 
 .btn {
     min-width: 105px;
-    background: rgba(205, 58, 21, 0.75);
+    background: var(--clr-accent);
     border: none;
     border-radius: 500px;
     color: var(--clr-text-primary);
@@ -367,6 +366,7 @@ footer>a>.fa-brands:focus {
 }
 
 .logo:last-child {
+    display: block;
     text-align: center;
     margin-bottom: 4rem;
 }
@@ -375,6 +375,7 @@ footer>a>.fa-brands:focus {
     header {
         background-image: url(../images/hero-bg-desktop.jpg);
         min-height: 100vh;
+        margin-bottom: 6.5rem;
     }
 
     /* ===============
@@ -399,7 +400,19 @@ footer>a>.fa-brands:focus {
 
     .about-container {
         max-width: 65%;
-        margin: 4rem auto 2.5rem;
+        margin: 6rem auto 2.5rem;
+    }
+
+    #about {
+        margin-top: 6.5rem;
+    }
+
+    .logo:last-child {
+        margin-bottom: 5.5rem;
+    }
+
+    .blurb {
+        width: 60%;
     }
 
 
@@ -434,6 +447,10 @@ footer>a>.fa-brands:focus {
         background: none;
         padding: 0;
         border: none;
+    }
+
+    .down-arrow {
+        min-width: 36px;
     }
 
     /* ===============

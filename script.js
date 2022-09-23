@@ -16,10 +16,3 @@ navOpen.addEventListener("click", () => {
 navClose.addEventListener("click", () => {
     navList.classList.add("hidden");
 })
-
-const documentHeight = () => {
-    const doc = document.documentElement
-    doc.style.setProperty('--doc-height', `${window.innerHeight}px`)
-}
-window.addEventListener("resize", documentHeight)
-documentHeight()
