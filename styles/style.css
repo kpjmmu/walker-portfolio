@@ -4,6 +4,7 @@
 
     --fw-base: 400;
     --fw-bold: 700;
+    --fw-x-bold: 900;
 
     --fs-12: .75rem;
     --fs-16: 1rem;
@@ -155,8 +156,9 @@ img {
     margin-top: 2rem;
 }
 
-.about-text>span {
-    font-weight: var(--fw-bold);
+.blurb>span {
+    font-weight: var(--fw-x-bold);
+    letter-spacing: 2px;
 }
 
 .resume-link {
@@ -182,7 +184,6 @@ footer>a>.fa-brands {
 footer>a>.fa-brands:hover,
 footer>a>.fa-brands:focus {
     cursor: pointer;
-    font-size: 1.75rem;
     transition: font-size .25s ease-in;
     background: -webkit-linear-gradient(var(--clr-text-primary), var(--clr-accent));
     -webkit-background-clip: text;
@@ -496,10 +497,4 @@ footer>a>.fa-brands:focus {
     footer>a>.fa-brands {
         font-size: 2rem;
     }
-
-    footer>a>.fa-brands:hover,
-    footer>a>.fa-brands:focus {
-        font-size: 2.25rem;
-    }
-
 }
