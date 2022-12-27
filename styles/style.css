@@ -217,7 +217,7 @@ footer>a>.fa-brands:focus {
 }
 
 .project-grid {
-    max-width: 85%;
+    max-width: 95%;
     margin: 0 auto;
     display: grid;
     gap: 1rem;
@@ -442,7 +442,7 @@ footer>a>.fa-brands:focus {
     }
 
     .project-grid {
-        max-width: 65%;
+        max-width: 50%;
         margin: 0 auto;
     }
 
